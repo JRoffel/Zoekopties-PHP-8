@@ -1,6 +1,9 @@
 <?php
 	$connection = new mysqli('localhost', 'root', '', 'metacritic');
-	$query = '';
+	$query = 'select game.id as game_id, game.name as game_name from game';
 	$result = $connection -> query($query);
-	$stuff = $result -> fetch_all(MYSQLI_ASSOC);
-	
+	$stuffs = $result -> fetch_all(MYSQLI_ASSOC);
+
+	$website_query = 'select id, name from website;';
+	$website_result = $connection -> query($website_query);
+	$websites = $website_result -> fetch_all(MYSQLI_ASSOC);
