@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <?php foreach($reviews as $review): ?>
+=======
+<?php
+	require'review.action.php';
+?>
+>>>>>>> origin/master
 <html>
 	<head>
 		<title> metacritic </title>
