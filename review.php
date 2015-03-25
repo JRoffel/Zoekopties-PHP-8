@@ -1,4 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<?php foreach($reviews as $review): ?>
 <html>
 	<head>
 		<title> metacritic </title>
@@ -9,19 +10,20 @@
 		<div class="header"> 
 			<h1> Metacritic </h1>
 		</div>
-		<h2>Dragon Age: Origins</h2>
+		<h2><?= $review['game_name'] ?></h2>
 		<ul class="naam">
-			<li>Platform: PC</li>
-			<li>Ontwikkelaar: BioWare</li>
-			<li>Uitgever: Electronic Arts</li>
-			<li>Reviews by website: IGN</li>
+			<li>Platform: <?= $review['platform'] ?></li>
+			<li>Ontwikkelaar: <?= $review['developer_name'] ?></li>
+			<li>Uitgever: <?= $review['publisher_name'] ?></li>
+			<li>Reviews by website: <?= $review['website_name'] ?></li>
 		</ul>
 		<ul>
-			<li>Grade: 90</li>
-			<li>Incredibly deep and expansive, Dragon Age: Origins is one of those titles that can easily swallow up dozens of hours of play and keep you coming back for more.</li>
-			<li><a href="http://pc.ign.com/articles/104/1041792p1.html">lees meer</a></li>
+			<li>Grade: <?= $review['grade'] ?></li>
+			<li><?= $review['description'] ?></li>
+			<li><a href="<?= $review['review_url'] ?>">lees meer</a></li>
 		</ul>
 		<hr>
 	</div>
 </body>
 </html>
+<?php endforeach; ?>
